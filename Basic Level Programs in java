@@ -1,0 +1,271 @@
+/******************************************************************************
+
+                           FIBONACCI SERIES WITHOUT RECURSION
+
+*******************************************************************************/
+
+/*
+public class Main
+{
+	public static void main(String[] args)
+	{
+		int n = 8;
+		int n1=0, n2=1, n3;
+		System.out.print(n1 + " " + n2);
+		for(int i=2;i<=n;i++)
+		{
+		    n3 = n1+n2;
+		    System.out.print(" " + n3 );
+		    n1=n2;
+		    n2=n3;
+		}
+	}
+}
+*/
+
+/******************************************************************************
+
+                           FIBONACCI SERIES WITH RECURSION
+
+*******************************************************************************/
+/*
+public class Main
+{
+    static int n1=0, n2=1 , n3;
+    public static void printfibbonacci(int n)
+    {
+       
+        if(n>0)
+        {
+            n3 =n1+n2;
+            n1 = n2;
+            n2 = n3;
+            System.out.print(" " + n3);
+            printfibbonacci(n-1);
+        }
+    }
+	public static void main(String[] args)
+	{
+		int n = 8;
+		System.out.print(n1 + " " + n2);
+		printfibbonacci(n-2);
+	}
+}
+*/
+
+/******************************************************************************
+
+                          WHETHER A NUMBER IS A PRIME NUMBER OR NOT
+
+*******************************************************************************/
+/*
+public class Main
+{
+	public static void main(String[] args)
+	{
+		int n =9;
+		int m = n/2;
+		int flag =0;
+		if(n==0 || n==1)
+		  System.out.println("Not an prime number");
+		else
+		{
+		    for(int i = 2;i<=m;i++)
+		    {
+		        if(n%i==0)
+		        {
+		          System.out.println("Not a prime number");
+		          flag = 1;
+		          break;
+		        } 
+		    }
+		    if(flag == 0)
+		       System.out.println(n+" "   + "Number is a prime number");
+		}
+	}
+}
+*/
+
+/******************************************************************************
+                            PALINDROME NUMBER OR NOT
+                         
+*******************************************************************************/
+/*
+public class Main
+{
+	public static void main(String[] args)
+	{
+		int n = 100;
+		int temp, a, rev =0;
+		temp = n;
+		while(n>0)
+		{
+		    a = n%10;
+		    rev = (rev*10) + a;
+		    n = n/10;
+		}
+		if(temp==rev)
+		  System.out.print( "Palindrome number");
+		else
+		  System.out.print( "Not a palindrome number");
+	}
+}
+*/
+
+/******************************************************************************
+                            FACTORIAL WITHOUT RECURSION
+                         
+*******************************************************************************/
+/*
+public class Main
+{
+	public static void main(String[] args)
+	{
+		int n = 3;
+		int f =1 ;
+		for(int i=1;i<=n;i++)
+		{
+		    f = f*i;
+		}
+		System.out.print("Factorial of " + n + " is " + f );
+	}
+}
+*/
+
+/******************************************************************************
+                            FACTORIAL WITH RECURSION
+                         
+*******************************************************************************/
+
+/*public class Main
+{
+    static int factorial(int n)
+    {
+        if(n==0)
+        return 1;
+        else
+        return (n * factorial(n-1));
+    }
+	public static void main(String[] args)
+	{
+		int n = 3;
+		int f = factorial(n);
+		System.out.print("Factorial of " + n + " is " + f );
+	}
+}
+*/
+
+/******************************************************************************
+                            ARMSTRONG NUMBER OR NOT
+                         
+*******************************************************************************/
+/*
+public class Main
+{
+	public static void main(String[] args)
+	{
+		int n = 100;
+		int temp, a, sum =0;
+		temp = n;
+		while(n>0)
+		{
+		    a = n%10;
+		    sum = sum + a*a*a;
+		    n = n/10;
+		}
+		if(temp==sum)
+		  System.out.print( "Armstrong number");
+		else
+		  System.out.print( "Not a Armstrong number");
+	}
+}
+*/
+/******************************************************************************
+                            GENERATE RANDOM NUMBER USING METHOD RANDOM
+                         
+*******************************************************************************/
+/*
+import java.lang.Math;
+public class Main
+{
+	public static void main(String[] args)
+	{
+		
+	//	System.out.println("random number "  + Math.random() );
+	//	System.out.println("random number "  + Math.random() );
+	//	System.out.println("random number "  + Math.random() );
+	float b = (float)Math.random();
+	System.out.print("random number "  + b );
+	}
+}
+*/
+
+/******************************************************************************
+                            GENERATE RANDOM NUMBER USING CLASS RANDOM
+                         
+*******************************************************************************/
+/*
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args)
+	{
+	   Random rand = new Random();
+	   int x = rand.nextInt();
+	   System.out.println(x);
+	   
+	   int y = rand.nextInt(10);
+	   System.out.print(y);
+	   
+	   //similary for float double boolean
+	}
+}
+*/
+
+/******************************************************************************
+                            COMPARING TWO OBJECTS 
+                         
+*******************************************************************************/
+/*
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args)
+	{
+	   Double x = new Double(123.45555);  
+       Long y = new Long(9887544);  
+       System.out.println(x.equals(y));
+       System.out.print(x.equals(123.45555));
+	   
+	   //similary for float double boolean
+	   
+	   // the == operator compares that two references are identical or not. 
+	   // the equals() method compares two objects.
+	}
+}
+*/
+
+/******************************************************************************
+                            Print ASCII VALUE
+                         
+*******************************************************************************/
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args)
+	{
+	   char ch1 = 'a';
+	   int ascii = ch1;
+	   int ch2  = 'b';
+	   int val = 65;
+       System.out.println(ascii);
+       System.out.println(ch2);
+       for(int i = 65; i <= 90; i++)  
+       {  
+        System.out.println(" The ASCII value of " + (char)i + "  =  " + i);  
+       }  
+	   
+	
+	}
+}
